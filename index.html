@@ -8,23 +8,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
     <style>
-        /* Definimos un color Azul Suave (similar al 'info' de Bootstrap, pero lo podemos personalizar si quieres) */
         :root {
             --bs-soft-blue: #0dcaf0; /* Color azul claro */
             --bs-soft-blue-darker: #0aa2c0; 
         }
 
-        /* ************************************************** */
-        /* 1. FONDO LLAMATIVO (Patrón de Puntos Sutiles) */
-        /* ************************************************** */
+        /* FONDO LLAMATIVO (Patrón de Puntos Sutiles) */
         body {
-            /* Mantenemos el patrón sutil de puntos para dar textura, pero más claro */
             background-color: #ffffff; 
             background-image: radial-gradient(#f1f3f5 1.5px, transparent 1.5px); 
             background-size: 30px 30px; 
         }
 
-        /* 2. ANIMACIÓN: Efecto de elevación en tarjetas (al pasar el mouse) */
+        /* ANIMACIÓN: Efecto de elevación en tarjetas */
         .animated-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             background-color: white !important; 
@@ -35,7 +31,7 @@
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
         }
 
-        /* 3. ANIMACIÓN: Pulso para CTA principal */
+        /* ANIMACIÓN: Pulso para CTA principal */
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 var(--bs-soft-blue); }
             70% { box-shadow: 0 0 0 10px rgba(13, 202, 240, 0); }
@@ -45,7 +41,7 @@
             animation: pulse 1.5s infinite;
         }
         
-        /* Estilo para los iconos de características (usando el nuevo azul suave) */
+        /* Estilo para los iconos de características */
         .feature-icon {
             font-size: 3rem;
             width: 5rem;
@@ -70,6 +66,35 @@
             border-radius: 5px;
             object-fit: cover;
         }
+        /* Estilo para los pasos */
+        .step-item {
+            position: relative;
+            padding-left: 3rem;
+        }
+        .step-item::before {
+            content: attr(data-step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background-color: var(--bs-soft-blue-darker);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        /* Estilo para la nueva sección de "próximamente" */
+        .soon-box {
+            border-left: 5px solid var(--bs-soft-blue);
+        }
+        /* Estilo para el enlace en el nav */
+        .nav-link.soon-link {
+            color: var(--bs-soft-blue-darker) !important;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body> 
@@ -77,7 +102,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="logo2.jpg" alt="Vivienda Fin" height="100" class="me-3 border border-secondary border-2"> <div>
+                <img src="logo2.jpg" alt="Vivienda Fin" height="100" class="me-3 border border-secondary border-2"> 
+                <div>
                     <h1 class="h5 fw-bold text-dark mb-0">VIVIENDA FIN</h1>
                     <p class="text-secondary small mb-0 d-none d-sm-block">Inmobiliaria & Financiamiento</p>
                 </div>
@@ -90,6 +116,11 @@
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item mx-2">
                         <a class="nav-link text-dark active" aria-current="page" href="#"><i class="bi bi-house-door me-1"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link soon-link" href="#seccion-proximamente">
+                            <i class="bi bi-building me-1"></i> Propiedades
+                        </a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link text-dark" href="https://www.facebook.com/profile.php?id=100063628115079" target="_blank">
@@ -116,7 +147,7 @@
         <div class="container-fluid py-5 text-center">
             <h2 class="display-3 fw-bolder mb-3" style="color: var(--bs-soft-blue);">¡Tu Hogar, Nuestro Compromiso!</h2>
             <p class="col-md-12 fs-4 text-white-75">
-                Somos VIVIENDA FIN, tus aliados expertos en Inmobiliaria y Financiamiento. Te guiamos para que encuentres 
+                Somos **VIVIENDA FIN**, tus aliados expertos en Inmobiliaria y Financiamiento. Te guiamos para que encuentres 
                 la casa perfecta y asegures el mejor crédito hipotecario disponible en el mercado.
             </p>
             <a href="http://wa.me/+526323214613" class="btn btn-info btn-lg mt-3 fw-bold shadow-sm pulse-cta" style="background-color: var(--bs-soft-blue); border-color: var(--bs-soft-blue);" target="_blank">
@@ -125,13 +156,11 @@
         </div>
     </section>
 
-    <hr class="my-5 border-secondary opacity-25">
-
     🎯 ¿Por Qué Elegir VIVIENDA FIN?
 
     <section class="row g-4 mb-5 text-center">
         <h3 class="fw-bold text-dark display-6 mb-4">La Confianza de Trabajar con Expertos</h3>
-
+        
         <div class="col-md-4">
             <div class="p-4 bg-white rounded-3 h-100 shadow-sm animated-card">
                 <div class="feature-icon mb-3">
@@ -165,7 +194,61 @@
 
     <hr class="my-5 border-secondary opacity-25">
 
-    🔑 Nuestros Servicios Clave
+    <section class="mb-5">
+        <h3 class="fw-bold text-dark display-6 text-center mb-5">✅ 4 Pasos Sencillos para Obtener tu Casa</h3>
+        
+        <div class="row g-5">
+            <div class="col-md-3">
+                <div class="step-item" data-step="1">
+                    <h5 class="fw-bold" style="color: var(--bs-soft-blue-darker);">Pre-aprobación</h5>
+                    <p class="text-muted small">Evaluamos tu perfil crediticio y capacidad de endeudamiento inicial.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="step-item" data-step="2">
+                    <h5 class="fw-bold" style="color: var(--bs-soft-blue-darker);">Búsqueda y Elección</h5>
+                    <p class="text-muted small">Te mostramos propiedades que encajan con tu presupuesto y gustos.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="step-item" data-step="3">
+                    <h5 class="fw-bold" style="color: var(--bs-soft-blue-darker);">Gestión y Solicitud</h5>
+                    <p class="text-muted small">Nos encargamos del papeleo, avalúos y la solicitud formal de crédito.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="step-item" data-step="4">
+                    <h5 class="fw-bold" style="color: var(--bs-soft-blue-darker);">Firma y Entrega</h5>
+                    <p class="p-muted small">Finalizamos el proceso en notaría y te entregamos las llaves de tu nuevo hogar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5 border-secondary opacity-25">
+
+    🚧 Catálogo de Propiedades
+
+    <section class="row justify-content-center mb-5" id="seccion-proximamente">
+        <div class="col-md-10">
+            <div class="p-5 bg-light rounded-4 shadow-sm text-center soon-box">
+                <i class="bi bi-tools display-4 mb-3" style="color: var(--bs-soft-blue);"></i>
+                <h3 class="fw-bold text-dark mb-3">¡Próximamente, Nuestro Catálogo de Casas en Venta!</h3>
+                <p class="fs-5 text-muted">
+                    Estamos actualizando nuestro inventario y finalizando los detalles para mostrarte **las mejores propiedades disponibles** con fotos, descripciones y precios.
+                </p>
+                <p class="mb-4 fw-bold">
+                    Mientras tanto, puedes **contactarnos directamente** para una consulta personalizada sobre el tipo de casa que buscas:
+                </p>
+                <a href="http://wa.me/+526323214613" class="btn btn-lg fw-bolder text-white" style="background-color: var(--bs-soft-blue-darker);" target="_blank">
+                    <i class="bi bi-chat-dots me-2"></i> ¡Quiero Saber las Propiedades!
+                </a>
+            </div>
+        </div>
+    </section>
+    <hr class="my-5 border-secondary opacity-25">
+
+   🔑 Nuestros Servicios Clave
 
     <section class="row g-4 text-center mb-5">
         
@@ -211,31 +294,35 @@
         </div>
         
     </section>
-
+    
     <section class="text-center my-5 p-5 bg-dark text-white rounded-4 shadow-lg">
-        <h3 class="display-6 fw-bold mb-3">¡Hablemos de Tu Futuro Hogar!</h3>
+        <h3 class="display-6 fw-bold mb-3">¡Agenda tu Cita de Asesoría!</h3>
         <p class="fs-5 mb-4">
             Tu meta de tener casa propia está más cerca de lo que crees. Contáctanos hoy mismo por WhatsApp.
         </p>
         <a href="http://wa.me/+526323214613" class="btn btn-info btn-lg fw-bolder text-white pulse-cta" style="background-color: var(--bs-soft-blue); border-color: var(--bs-soft-blue);" target="_blank">
-            <i class="bi bi-telephone-fill me-2"></i> Llamar o Enviar WhatsApp
+            <i class="bi bi-telephone-fill me-2"></i> Enviar WhatsApp
         </a>
     </section>
 </main>
 
 <section class="bg-info py-4" style="background-color: var(--bs-soft-blue) !important;">
     <div class="container text-center text-white">
-        <h4 class="fw-bold mb-3">¿Prefieres Contacto Directo?</h4>
+        <h4 class="fw-bold mb-3">Contáctanos</h4>
         <div class="row justify-content-center">
-            <div class="col-md-5 mb-3 mb-md-0">
-                <a href="mailto:asesorirmafigueroa@gmail.com" class="btn btn-outline-light btn-lg w-100">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <a href="mailto:asesorirmafigueroa@gmail.com" class="btn btn-outline-light w-100">
                     <i class="bi bi-envelope-fill me-2"></i> Correo: asesorirmafigueroa@gmail.com
                 </a>
             </div>
-            <div class="col-md-5">
-                <a href="tel:+526323214613" class="btn btn-outline-light btn-lg w-100">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <a href="tel:+526323214613" class="btn btn-outline-light w-100">
                     <i class="bi bi-telephone-fill me-2"></i> Teléfono: +52 632 321 4613
                 </a>
+            </div>
+            <div class="col-md-4">
+                <a href="https://www.facebook.com/profile.php?id=100063628115079" target="_blank" class="btn btn-outline-light me-2"><i class="bi bi-facebook fs-5"></i></a>
+                <a href="#" target="_blank" class="btn btn-outline-light"><i class="bi bi-instagram fs-5"></i></a>
             </div>
         </div>
     </div>
