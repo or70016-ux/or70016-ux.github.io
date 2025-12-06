@@ -53,6 +53,45 @@
             align-items: center;
             justify-content: center;
         }
+        
+        /* ************************************** */
+        /* ESTILO PARA TÍTULOS DE SECCIÓN PRINCIPALES (H2) */
+        .section-heading {
+            font-size: 2.5rem; 
+            font-weight: 800; 
+            color: #212529; 
+            margin-top: 3rem;
+            margin-bottom: 2.5rem; 
+            padding-bottom: 0.5rem;
+            border-bottom: 4px solid var(--bs-soft-blue-darker); 
+            display: block;
+            
+            /* MODIFICACIONES PARA CENTRAR */
+            text-align: center; /* Centra el texto y el icono */
+            width: 90%; /* Limita el ancho del bloque de la línea divisoria */
+            margin-left: auto; /* Centra el bloque */
+            margin-right: auto; /* Centra el bloque */
+        }
+        .section-heading i {
+            color: var(--bs-soft-blue-darker);
+            font-size: 2rem;
+            vertical-align: middle;
+        }
+        /* ************************************** */
+
+        /* TÍTULOS DE TARJETAS MÁS GRANDES Y BONITOS */
+        .card-title-lg {
+            font-size: 1.5rem !important; 
+            font-weight: 700; 
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05); 
+        }
+        
+        /* TÍTULOS DE PASOS MÁS GRANDES */
+        .step-title-lg {
+            font-size: 1.3rem !important; 
+            font-weight: 700;
+        }
+
 
         .hero-section {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('imagenes/fondo_casa.jpg');
@@ -156,7 +195,7 @@
         </div>
     </section>
 
-    🎯 ¿Por Qué Elegir VIVIENDA FIN?
+    <h2 class="section-heading"><i class="bi bi-bullseye me-2"></i> ¿Por Qué Elegir VIVIENDA FIN?</h2>
 
     <section class="row g-4 mb-5 text-center">
         <h3 class="fw-bold text-dark display-6 mb-4">La Confianza de Trabajar con Expertos</h3>
@@ -166,7 +205,7 @@
                 <div class="feature-icon mb-3">
                     <i class="bi bi-people-fill"></i>
                 </div>
-                <h4 class="fw-bold" style="color: var(--bs-soft-blue-darker);">Asesoría Personalizada</h4>
+                <h4 class="card-title-lg" style="color: var(--bs-soft-blue-darker);">Asesoría Personalizada</h4>
                 <p class="text-muted">Recibe acompañamiento experto de inicio a fin. Resolvemos tus dudas en cada etapa del proceso inmobiliario.</p>
             </div>
         </div>
@@ -176,7 +215,7 @@
                 <div class="feature-icon mb-3">
                     <i class="bi bi-bank"></i>
                 </div>
-                <h4 class="fw-bold" style="color: var(--bs-soft-blue-darker);">Mejor Tasa Garantizada</h4>
+                <h4 class="card-title-lg" style="color: var(--bs-soft-blue-darker);">Mejor Tasa Garantizada</h4>
                 <p class="text-muted">Comparamos las mejores opciones de crédito hipotecario de múltiples bancos para conseguirte la tasa más baja.</p>
             </div>
         </div>
@@ -186,7 +225,7 @@
                 <div class="feature-icon mb-3">
                     <i class="bi bi-house-check-fill"></i>
                 </div>
-                <h4 class="fw-bold" style="color: var(--bs-soft-blue-darker);">Propiedades Verificadas</h4>
+                <h4 class="card-title-lg" style="color: var(--bs-soft-blue-darker);">Propiedades Verificadas</h4>
                 <p class="text-muted">Solo trabajamos con inmuebles con documentación legal revisada. Tu inversión está segura con nosotros.</p>
             </div>
         </div>
@@ -200,25 +239,25 @@
         <div class="row g-5">
             <div class="col-md-3">
                 <div class="step-item" data-step="1">
-                    <h5 class="fw-bold" style="color: var(--bs-soft-blue-darker);">Pre-aprobación</h5>
+                    <h5 class="step-title-lg" style="color: var(--bs-soft-blue-darker);">Pre-aprobación</h5>
                     <p class="text-muted small">Evaluamos tu perfil crediticio y capacidad de endeudamiento inicial.</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="step-item" data-step="2">
-                    <h5 class="fw-bold" style="color: var(--bs-soft-blue-darker);">Búsqueda y Elección</h5>
+                    <h5 class="step-title-lg" style="color: var(--bs-soft-blue-darker);">Búsqueda y Elección</h5>
                     <p class="text-muted small">Te mostramos propiedades que encajan con tu presupuesto y gustos.</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="step-item" data-step="3">
-                    <h5 class="fw-bold" style="color: var(--bs-soft-blue-darker);">Gestión y Solicitud</h5>
+                    <h5 class="step-title-lg" style="color: var(--bs-soft-blue-darker);">Gestión y Solicitud</h5>
                     <p class="text-muted small">Nos encargamos del papeleo, avalúos y la solicitud formal de crédito.</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="step-item" data-step="4">
-                    <h5 class="fw-bold" style="color: var(--bs-soft-blue-darker);">Firma y Entrega</h5>
+                    <h5 class="step-title-lg" style="color: var(--bs-soft-blue-darker);">Firma y Entrega</h5>
                     <p class="p-muted small">Finalizamos el proceso en notaría y te entregamos las llaves de tu nuevo hogar.</p>
                 </div>
             </div>
@@ -227,7 +266,7 @@
 
     <hr class="my-5 border-secondary opacity-25">
 
-    🚧 Catálogo de Propiedades
+    <h2 class="section-heading"><i class="bi bi-tools me-2"></i> Catálogo de Propiedades</h2>
 
     <section class="row justify-content-center mb-5" id="seccion-proximamente">
         <div class="col-md-10">
@@ -235,7 +274,7 @@
                 <i class="bi bi-tools display-4 mb-3" style="color: var(--bs-soft-blue);"></i>
                 <h3 class="fw-bold text-dark mb-3">¡Próximamente, Nuestro Catálogo de Casas en Venta!</h3>
                 <p class="fs-5 text-muted">
-                    Estamos actualizando nuestro inventario y finalizando los detalles para mostrarte **las mejores propiedades disponibles** con fotos, descripciones y precios.
+                    Estamos actualizando nuestro inventario y finalizando los detalles para mostrarte las mejores propiedades disponibles con fotos, descripciones y precios.
                 </p>
                 <p class="mb-4 fw-bold">
                     Mientras tanto, puedes **contactarnos directamente** para una consulta personalizada sobre el tipo de casa que buscas:
@@ -248,7 +287,7 @@
     </section>
     <hr class="my-5 border-secondary opacity-25">
 
-   🔑 Nuestros Servicios Clave
+    <h2 class="section-heading"><i class="bi bi-key-fill me-2"></i> Nuestros Servicios Clave</h2>
 
     <section class="row g-4 text-center mb-5">
         
@@ -258,7 +297,7 @@
             <div class="card p-4 h-100 shadow-sm animated-card">
                 <i class="bi bi-door-open-fill display-4 text-danger mb-3"></i> 
                 <div class="card-body">
-                    <h4 class="card-title fw-bold text-dark">Venta de Inmuebles</h4>
+                    <h4 class="card-title card-title-lg text-dark">Venta de Inmuebles</h4>
                     <p class="card-text text-muted">
                         Explora nuestro catálogo exclusivo de casas, departamentos y terrenos listos para habitar o invertir.
                     </p>
@@ -270,7 +309,7 @@
             <div class="card p-4 h-100 shadow-sm animated-card">
                 <i class="bi bi-currency-dollar display-4 text-success mb-3"></i> 
                 <div class="card-body">
-                    <h4 class="card-title fw-bold text-dark">Gestión de Créditos</h4>
+                    <h4 class="card-title card-title-lg text-dark">Gestión de Créditos</h4>
                     <p class="card-text text-muted">
                         Te ayudamos a obtener créditos hipotecarios, bancarios y de instituciones como INFONAVIT o FOVISSSTE.
                     </p>
@@ -282,7 +321,7 @@
             <div class="card p-4 h-100 shadow-sm animated-card" style="border: 2px solid var(--bs-soft-blue);">
                 <i class="bi bi-chat-dots-fill display-4 mb-3" style="color: var(--bs-soft-blue);"></i> 
                 <div class="card-body">
-                    <h4 class="card-title fw-bold text-dark">Asesoría Inmobiliaria</h4>
+                    <h4 class="card-title card-title-lg text-dark">Asesoría Inmobiliaria</h4>
                     <p class="card-text text-muted">
                         Recibe una consulta gratuita para evaluar tu capacidad de compra y opciones de financiamiento sin compromiso.
                     </p>
